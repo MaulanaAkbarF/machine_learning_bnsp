@@ -39,7 +39,7 @@ if not os.path.exists(os.path.join('Model_Pickels')):
 with open(os.path.join('Model_Pickels', 'Encoder_gender.pkl'), 'wb') as f:
     pickle.dump(le_gender, f)
 
-with open(os.path.join('Model_Pickels', 'Encoder_learner.pkl'), 'wb') as f:
+with open(os.path.join('Model_Pickels', 'Encoder_learners.pkl'), 'wb') as f:
     pickle.dump(le_learner, f)
 
 print(f'Running: Feature Selection')
