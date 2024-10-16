@@ -33,13 +33,13 @@ le_learner.classes_ = list(learner_mapping.keys())
 df['Gender'] = le_gender.fit_transform(df['Gender'])
 df['Learner'] = le_learner.fit_transform(df['Learner'])
 
-if not os.path.exists(os.path.join('Machine_Learning', 'Models')):
-    os.makedirs(os.path.join('Machine_Learning', 'Models'))
+if not os.path.exists(os.path.join('Model_Pickels')):
+    os.makedirs(os.path.join('Model_Pickels'))
 
-with open(os.path.join('Machine_Learning', 'Models', 'Encoder_gender.pkl'), 'wb') as f:
+with open(os.path.join('Model_Pickels', 'Encoder_gender.pkl'), 'wb') as f:
     pickle.dump(le_gender, f)
 
-with open(os.path.join('Machine_Learning', 'Models', 'Encoder_learner.pkl'), 'wb') as f:
+with open(os.path.join('Model_Pickels', 'Encoder_learner.pkl'), 'wb') as f:
     pickle.dump(le_learner, f)
 
 print(f'Running: Feature Selection')
